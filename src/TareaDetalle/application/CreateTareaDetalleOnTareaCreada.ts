@@ -34,7 +34,6 @@ export class CreateTareaDetalleOnTareaCreada implements DomainEventSubscriber<Ta
         tarea.nombre,
         tarea.fechaDeRealizacion,
         tarea.id));
-        throw new Error("CreateTareaDetalleOnTareaCreada error arbitrario")
     }
 
 }

@@ -24,8 +24,12 @@ export const TareaSchema = new EntitySchema<Tarea>({
         },
 
         fechaDeRealizacion : {
-            type : Date,
-            nullable : false
+            type : String,
+            nullable : false,
+            transformer : {
+                from : (value : string) => new Date(value),
+                to : (value : Date) => value.toISOString()
+            }
         },
         creadaPor : {
             type : String,
@@ -42,8 +46,12 @@ export const TareaSchema = new EntitySchema<Tarea>({
             nullable : false
         },
         fechaDeCreacion : {
-            type : Date,
-            nullable : false
+            type : String,
+            nullable : false,
+            transformer : {
+                from : (value : string) => new Date(value),
+                to : (value : Date) => value.toISOString()
+            }
         }
     }
 

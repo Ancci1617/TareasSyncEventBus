@@ -19,7 +19,9 @@ export class Tarea extends Aggregate{
         readonly fechaDeCreacion : Date
     ){super()}
 
-
+    getId(){
+        return this.id
+    }
 
     toPrimitives(){
         return {
